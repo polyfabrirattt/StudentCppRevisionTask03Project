@@ -48,5 +48,24 @@
 */
 
 string task02(int a, int b, int n) {
-	return "error";
+	int cenaRub = 0;
+	int cenaKop = 0;
+	int ostatok;
+	
+	if (a < 0 && b < 0) {
+		return "error";
+	}
+	else {
+		cenaRub = a * n;
+		cenaKop = b * n;
+	}
+	if (cenaKop > 10) {
+		ostatok = b % 10;
+		cenaRub = cenaRub + ostatok;
+	}
+
+
+	return "";
+
+	
 }
