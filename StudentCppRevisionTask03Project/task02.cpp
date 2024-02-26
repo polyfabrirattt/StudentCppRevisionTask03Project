@@ -48,24 +48,12 @@
 */
 
 string task02(int a, int b, int n) {
-	int cenaRub = 0;
-	int cenaKop = 0;
-	int ostatok;
-	
-	if (a < 0 && b < 0) {
+	if ((a == 0 && b == 0) || n <= 0 || b < 0 || a < 0) {
 		return "error";
-	}
-	else {
-		cenaRub = a * n;
-		cenaKop = b * n;
-	}
-	if (cenaKop > 10) {
-		ostatok = b % 10;
-		cenaRub = cenaRub + ostatok;
-	}
-
-
-	return "";
-
+}
+	int sum = (a * 100 + b) * n;
+	a = sum / 100;
+	b = sum - a * 100;
+	return to_string(a) + " " + to_string(b);
 	
 }
